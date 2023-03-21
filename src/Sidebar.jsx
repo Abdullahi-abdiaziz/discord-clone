@@ -1,23 +1,22 @@
-import { BsPlus, BsFillLightningFill, BsGearFill } from 'react-icons/bs';
+import { BsPlus, BsFillLightningFill, BsGearFill } from "react-icons/bs";
 import { FaFire, FaPoo, FaBitcoin } from "react-icons/fa";
-import { AiOutlineDownload } from "react-icons/ai"
+import { AiOutlineDownload } from "react-icons/ai";
 
 export function Sidebar() {
-
-  const SideBarIcon = ({ icon, text = 'tooltip' }) => (
+  const SideBarIcon = ({ icon, text = "tooltip" }) => (
     <div className="sidebar-icon group">
       {icon}
-      <span className='sidebar-tooltip group-hover:scale-100'>
-        {text}
-      </span>  
-    </div>);
+      <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  );
 
   return (
-    <div className="fixed top-0 left-0 min-h-screen w-16 m-0 
+    <div
+      className="fixed top-0 left-0 min-h-screen w-16 m-0 
                     flex flex-col 
                     bg-primary text-secondary shadow-lg"
     >
-      <SideBarIcon icon={<FaFire size={28} />} />
+      <SideBarIcon icon={<FaFire size={28} text={"Discord on Fire"} />} />
       <SideBarIcon icon={<BsPlus size={32} />} text={"Add a Server"} />
       <SideBarIcon icon={<BsFillLightningFill size={20} />} />
       <SideBarIcon icon={<AiOutlineDownload size={20} />} text={"Download Apps"} />
